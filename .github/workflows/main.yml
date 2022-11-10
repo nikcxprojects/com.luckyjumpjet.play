@@ -57,6 +57,7 @@ jobs:
       - uses: game-ci/unity-builder@v2.1.2
         id: buildApk
         with:
+          buildName: ${{ env.APP_NAME }}
           androidAppBundle: false
           androidKeystoreName: user.keystore
           androidKeystoreBase64: ${{needs.EncodeKeystoreToBase64.outputs.encoding}}
@@ -68,7 +69,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ env.APP_NAME }}
-          path: build/Android
+          path: build/${{ env.APP_NAME }}
           
   buildAndroidAAB:
     name: Build for Android(AAB)
@@ -91,6 +92,7 @@ jobs:
           
       - uses: game-ci/unity-builder@v2.1.2
         with:
+          buildName: ${{ env.APP_NAME }}
           androidAppBundle: true
           androidKeystoreName: user.keystore
           androidKeystoreBase64: ${{needs.EncodeKeystoreToBase64.outputs.encoding}}
@@ -102,7 +104,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ env.APP_NAME }}
-          path: build/Android
+          path: build/${{ env.APP_NAME }}
           
   SendTelegramNotifyApk:
     runs-on: ubuntu-latest
@@ -116,7 +118,7 @@ jobs:
         id: download
         with:
             name: ${{ env.APP_NAME }}
-            path: ${{ github.workspace }}/build/Android
+            path: ${{ github.workspace }}/build/${{ env.APP_NAME }}
             
       - name: send telegram message
         uses: appleboy/telegram-action@master
@@ -124,7 +126,7 @@ jobs:
               to: ${{ env.ChatID_APK }}
               token: ${{ env.BotToken }}
               message: "${{ env.APP_NAME }}"
-              document: '${{ github.workspace }}/build/Android/Android.apk'
+              document: '${{ github.workspace }}/build/Android/${{ env.APP_NAME }}.apk'
               
   SendTelegramNotifyAAB:
     runs-on: ubuntu-latest
@@ -138,7 +140,7 @@ jobs:
         id: download
         with:
             name: ${{ env.APP_NAME }}
-            path: ${{ github.workspace }}/build/Android
+            path: ${{ github.workspace }}/build/${{ env.APP_NAME }}
             
       - name: send telegram message
         uses: appleboy/telegram-action@master
@@ -146,4 +148,4 @@ jobs:
               to: ${{ env.ChatID_AAB }}
               token: ${{ env.BotToken }}
               message: "${{ env.APP_NAME }}"
-              document: '${{ github.workspace }}/build/Android/Android.aab'
+              document: '${{ github.workspace }}/build/Android/${{ env.APP_NAME }}.aab'
