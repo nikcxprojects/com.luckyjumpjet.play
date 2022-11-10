@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9efdfdfe3c95f4e9afb460d7cb7d60, type: 3}
+  m_Name: Theme3
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: c698a4b341a9cbe45b3c213a79f9dcc9, type: 3}
+  ship: {fileID: 21300000, guid: 658429776a84ae04f8e122d8c673f326, type: 3}
+  gem: {fileID: 21300000, guid: ee06f6e17921c5549803c0f60627e723, type: 3}
+  id: 3
