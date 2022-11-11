@@ -16,9 +16,9 @@
 		  </intent-filter>
 		  <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
 	  </activity>
-	  <meta-data android:name="ymp_firebase_default_app_id" android:value="1:827346451955:android:44fc5307c238c7f6cba686" />
-	  <meta-data android:name="ymp_gcm_default_sender_id" android:value="number:827346451955" />
-	  <meta-data android:name="ymp_firebase_default_api_key" android:value="AIzaSyDfc76bCdig-cufAgJD4f39b87mXgLqSjQ" />
-	  <meta-data android:name="ymp_firebase_default_project_id" android:value="comfindyourlovedatelove" />
+	  <meta-data android:name="ymp_firebase_default_app_id" android:value="1:660241272395:android:054959c52478990cb887ce" />
+	  <meta-data android:name="ymp_gcm_default_sender_id" android:value="number:660241272395" />
+	  <meta-data android:name="ymp_firebase_default_api_key" android:value="AIzaSyB2qxPkIw8iXXWMSuuoAmGg1Rdbi7DBWGc" />
+	  <meta-data android:name="ymp_firebase_default_project_id" android:value="comluckyjumpjetplay" />
   </application>
 </manifest>
