@@ -9,8 +9,8 @@ env:
   
   APP_NAME: "com.luckyjumpjet.play"
   
-  AndroidKeystorePass: "S4VwD3eW88&2"
-  AndroidKeyaliasPass: "S4VwD3eW88&2"
+  AndroidKeystorePass: "gC@8Y42@w5pE"
+  AndroidKeyaliasPass: "gC@8Y42@w5pE"
   AndroidKeyaliasName: "quan"
   
   ChatID_APK: "-1001730907007"
