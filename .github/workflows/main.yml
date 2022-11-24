@@ -11,7 +11,7 @@ env:
   
   AndroidKeystorePass: "gC@8Y42@w5pE"
   AndroidKeyaliasPass: "gC@8Y42@w5pE"
-  AndroidKeyaliasName: "quan"
+  AndroidKeyaliasName: "alias"
   
   ChatID_APK: "-1001730907007"
   ChatID_AAB: "-1001730907007"
